@@ -1,3 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creative’s Interactive Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      background-color: #2e8b57;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      box-shadow: 2px 2px 8px gray;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e6b47;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This is Creative’s Interactive Page 💫</h1>
+
+  <!-- Background color changer -->
+  <button onclick="changeBackground()">Change Background Color 🎨</button>
+
+  <!-- Dark mode toggle -->
+  <button onclick="toggleDarkMode()">Toggle Dark Mode 🌙</button>
+
+  <!-- Fun message button -->
+  <button onclick="alert('You are highly welcome ✨')">Kindly click me 💌</button>
+
+  <!-- Your hosted image -->
+  <img 
+    src="https://i.postimg.cc/xjvnk3ww/Whats-App-Image-2025-07-11-at-11-40-40.png" 
+    alt="Creative’s Image" 
+    style="max-width:300px; border-radius:10px; box-shadow: 3px 3px 10px gray; margin-top:20px;">
+
+  <!-- JavaScript functions -->
+  <script>
+    function changeBackground() {
+      const colors = ["#ffecd1", "#d1f0ff", "#e0ffe0"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
 {
 	"folders": [
 		{
