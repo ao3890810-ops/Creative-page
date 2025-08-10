@@ -2,25 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Creative's Interactive Page</title>
+  <title>Creative’s Interactive Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 40px;
       transition: background-color 0.3s ease;
-    }
-
-    nav {
-      background-color: #2e8b57;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: bold;
     }
 
     button {
@@ -48,49 +36,42 @@
 </head>
 <body>
 
-  <!-- 🌐 Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <h1>This is Creative’s Interactive Page 💫</h1>
 
-  <!-- Buttons -->
+  <!-- Background color changer -->
   <button onclick="changeBackground()">Change Background Color 🎨</button>
+
+  <!-- Dark mode toggle -->
   <button onclick="toggleDarkMode()">Toggle Dark Mode 🌙</button>
+
+  <!-- Fun message button -->
   <button onclick="alert('You are highly welcome ✨')">Kindly click me 💌</button>
 
-  <a href="https://i.postimg.cc/xjvnk3ww/Whats-App-Image-2025-07-11-at-11-40-40.png" target="_blank"
-   onclick="showImageDescription(event)">
-  <img 
-    src="https://i.postimg.cc/xjvnk3ww/Whats-App-Image-2025-07-11-at-11-40-40.png" 
-    alt="Creative’s Image" 
-    style="max-width:300px; border-radius:10px; box-shadow: 3px 3px 10px gray; margin-top:20px;">
-</a>
+  <!-- Your hosted image with description alert on click -->
+  <a href="https://i.postimg.cc/xjvnk3ww/Whats-App-Image-2025-07-11-at-11-40-40.png" target="_blank" onclick="showImageDescription(event)">
+    <img 
+      src="https://i.postimg.cc/xjvnk3ww/Whats-App-Image-2025-07-11-at-11-40-40.png" 
+      alt="Creative’s Image" 
+      style="max-width:300px; border-radius:10px; box-shadow: 3px 3px 10px gray; margin-top:20px;">
+  </a>
 
-  <!-- JavaScript -->
   <script>
     function changeBackground() {
       const colors = ["#ffecd1", "#d1f0ff", "#e0ffe0"];
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       document.body.style.backgroundColor = randomColor;
     }
-    
+
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
-   }
+    }
 
     function showImageDescription(event) {
-  event.preventDefault(); // Prevents immediate navigation
-  alert("This is creative’s featured image! feel free to view it in full size, we’re so privilage to your visit,
-        and we’re going to establish all what you need, stay curious.");
-  window.open(event.currentTarget.href, '_blank'); // Opens the image in a new tab after alert
-}
+      event.preventDefault();
+      alert("This is Creative’s featured image! Feel free to view it in full size.");
+      window.open(event.currentTarget.href, '_blank');
+    }
   </script>
 
 </body>
 </html>
-
-
